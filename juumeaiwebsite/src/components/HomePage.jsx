@@ -34,7 +34,7 @@ const HomePage = () => {
       "Real-time updates and controls are essential for securing AI, ensuring systems remain resilient against emerging cyber threats. Cyber companies implement continuous monitoring and automated patching to detect vulnerabilities and deploy security updates without disrupting AI operations.",
   }
 
-  const bubbleSizes = useRef(items.reduce((acc, item) => ({ ...acc, [item.name]: 145 }), {}))
+  const bubbleSizes = useRef(items.reduce((acc, item) => ({ ...acc, [item.name]: 140 }), {}))
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -215,7 +215,7 @@ const HomePage = () => {
           </div>
 
           {/* Circle Diagram or Timeline */}
-          <div className="mt-32">{windowWidth >= 1350 ? <CircleDiagram /> : <Timeline />}</div>
+          <div className="mt-32">{windowWidth >= 1375 ? <CircleDiagram /> : <Timeline />}</div>
         </section>
 
         {/* Additional spacing before footer */}
