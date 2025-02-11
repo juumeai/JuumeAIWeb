@@ -58,7 +58,6 @@ const App = () => {
         </Routes>
       </main>
 
-      {/* Footer dynamically positioned */}
       <div className={isPageShort ? "mt-auto" : ""}>
         <Footer />
       </div>
