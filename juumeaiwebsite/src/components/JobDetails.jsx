@@ -15,9 +15,7 @@ const JobDetails = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Sticky Header (Job Title + Apply Button) */}
       <div className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md px-12 py-6 flex flex-col md:flex-row justify-between items-center border-b">
-        {/* Back Button */}
         <button
           className="text-[#17194c] hover:text-[#273184] transition font-semibold text-lg"
           onClick={() => navigate("/open-positions")}
@@ -25,12 +23,10 @@ const JobDetails = () => {
           ← Back to Open Positions
         </button>
 
-        {/* Job Title */}
         <h1 className="text-5xl font-extrabold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent text-center">
           {job.title}
         </h1>
 
-        {/* Apply Button */}
         <button
           className="px-6 py-3 bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] text-white rounded-lg font-semibold shadow-md transition transform hover:scale-105 hover:shadow-xl"
           onClick={() => navigate('/job-application', { state: { job } })}
@@ -39,14 +35,12 @@ const JobDetails = () => {
         </button>
       </div>
 
-      {/* Job Metadata */}
       <div className="px-12 pt-10">
         <p className="text-xl text-gray-700 italic">
           {job.location} • {job.type}
         </p>
       </div>
 
-      {/* Job Description */}
       <div className="px-12 py-8 text-lg font-semibold leading-relaxed w-full">
         <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-4">
             About The Company
@@ -63,13 +57,11 @@ business in an easy, quick, and most importantly, secure manner without concern.
 AI will usher in a new IT frontier, and at Juume AI, we are pushing the boundaries 
 with organizations to make this happen.</p>
         <br />
-        {/* About The Role */}
         <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-4">
           About The Role
         </h2>
         <p className="text-black leading-relaxed">{job.description}</p>
 
-        {/* Responsibilities */}
         {job.responsibilities && (
           <>
             <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mt-8 mb-4">
@@ -83,7 +75,6 @@ with organizations to make this happen.</p>
           </>
         )}
 
-        {/* Requirements */}
         {job.requirements && (
           <>
             <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mt-8 mb-4">
@@ -97,7 +88,6 @@ with organizations to make this happen.</p>
           </>
         )}
 
-        {/* Nice to Have */}
         {job.niceToHave && (
           <>
             <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mt-8 mb-4">
@@ -111,7 +101,6 @@ with organizations to make this happen.</p>
           </>
         )}
 
-        {/* Technologies */}
         {job.technologies && (
           <>
             <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mt-8 mb-4">

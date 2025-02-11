@@ -215,7 +215,7 @@ const HomePage = () => {
           </div>
 
           {/* Circle Diagram or Timeline */}
-          <div className="mt-32">{windowWidth >= 1550 ? <CircleDiagram /> : <Timeline />}</div>
+          <div className="mt-32">{windowWidth >= 1350 ? <CircleDiagram /> : <Timeline />}</div>
         </section>
 
         {/* Additional spacing before footer */}

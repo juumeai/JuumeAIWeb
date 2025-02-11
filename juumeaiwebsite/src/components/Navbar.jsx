@@ -120,7 +120,6 @@ const Navbar = () => {
               </Link>
             </li>
 
-            {/* Dropdowns */}
             {Object.entries(dropdownMenus).map(([menu, items]) => (
               <li key={menu} className="relative dropdown-container">
                 <button
@@ -150,8 +149,6 @@ const Navbar = () => {
                 )}
               </li>
             ))}
-
-            {/* Contact Us */}
             <li>
               <Link
                 to="/contact-us"
@@ -165,7 +162,6 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button onClick={toggleMobileMenu} className="text-black focus:outline-none p-2">
               <FaBars size={24} />
@@ -174,12 +170,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileOpen && (
         <div className="lg:hidden bg-white shadow-md border-t">
           <div className="max-w-7xl mx-auto px-4 py-3">
             <ul className="space-y-2">
-              {/* Home & About Us */}
               {["Home", "About Us"].map((menu) => {
                 const path = `/${menu.replace(/\s+/g, "-").toLowerCase()}`;
                 return (
@@ -195,7 +189,6 @@ const Navbar = () => {
                 );
               })}
 
-              {/* Dropdowns */}
               {Object.entries(dropdownMenus).map(([menu, items]) => (
                 <li key={menu} className="space-y-1">
                   <button
@@ -223,8 +216,6 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-
-              {/* Contact Us */}
               <li>
                 <Link
                   to="/contact-us"
