@@ -34,7 +34,7 @@ const HomePage = () => {
       "Real-time updates and controls are essential for securing AI, ensuring systems remain resilient against emerging cyber threats. Cyber companies implement continuous monitoring and automated patching to detect vulnerabilities and deploy security updates without disrupting AI operations.",
   }
 
-  const bubbleSizes = useRef(items.reduce((acc, item) => ({ ...acc, [item.name]: 150 }), {}))
+  const bubbleSizes = useRef(items.reduce((acc, item) => ({ ...acc, [item.name]: 145 }), {}))
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
