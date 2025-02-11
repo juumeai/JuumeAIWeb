@@ -57,7 +57,6 @@ const AIFrameworks = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect screen size
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -69,24 +68,20 @@ const AIFrameworks = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Function to move to the previous framework
   const prevFramework = () => {
     setActiveIndex((prev) => (prev === 0 ? frameworks.length - 1 : prev - 1));
   };
 
-  // Function to move to the next framework
   const nextFramework = () => {
     setActiveIndex((prev) => (prev === frameworks.length - 1 ? 0 : prev + 1));
   };
 
   return (
     <div className="p-8 min-h-screen text-black flex flex-col items-center w-full">
-      {/* Heading */}
       <h2 className="text-5xl font-extrabold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-8">
         AI Frameworks & Standards
       </h2>
 
-      {/* ✅ Tile Layout for Mobile Screens */}
       {isMobile ? (
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {frameworks.map((framework, index) => (
@@ -94,24 +89,20 @@ const AIFrameworks = () => {
               key={index}
               className="w-full bg-white p-6 rounded-lg shadow-md flex flex-col items-center"
             >
-              {/* Image */}
               <img
                 src={framework.image_src}
                 alt={framework.title}
                 className="rounded-lg shadow-lg max-w-full"
               />
 
-              {/* Title */}
               <h3 className="text-3xl font-bold mt-4 bg-clip-text text-transparent bg-gradient-to-r from-[#17194c] to-[#d3b2f9]">
                 {framework.title}
               </h3>
 
-              {/* Description */}
               <p className="text-black text-md font-semibold mt-4">
                 {framework.description}
               </p>
 
-              {/* External Link */}
               {framework.blog_link !== "#" && (
                 <a
                   href={framework.blog_link}
@@ -126,9 +117,7 @@ const AIFrameworks = () => {
           ))}
         </div>
       ) : (
-        /* ✅ Slider for Larger Screens */
         <div className="relative flex items-center justify-between w-full max-w-[90vw]">
-          {/* Left Arrow Button - Placed Outside */}
           <button
             className="absolute left-[-60px] p-4 bg-[#17194c] text-white rounded-full shadow-md hover:scale-110 transition z-10"
             onClick={prevFramework}
@@ -136,9 +125,7 @@ const AIFrameworks = () => {
             <FaArrowLeft size={24} />
           </button>
 
-          {/* Active Framework Details - Full Width */}
           <div className="w-full bg-white p-6 rounded-lg shadow-md flex flex-col lg:flex-row items-center gap-8">
-            {/* Image Section - 50% Width */}
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
                 src={frameworks[activeIndex].image_src}
@@ -147,7 +134,6 @@ const AIFrameworks = () => {
               />
             </div>
 
-            {/* Text Details Section - 50% Width */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h3 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#17194c] to-[#d3b2f9]">
                 {frameworks[activeIndex].title}
@@ -156,7 +142,6 @@ const AIFrameworks = () => {
                 {frameworks[activeIndex].description}
               </p>
 
-              {/* External Link */}
               {frameworks[activeIndex].blog_link !== "#" && (
                 <a
                   href={frameworks[activeIndex].blog_link}
@@ -170,7 +155,6 @@ const AIFrameworks = () => {
             </div>
           </div>
 
-          {/* Right Arrow Button - Placed Outside */}
           <button
             className="absolute right-[-60px] p-4 bg-[#17194c] text-white rounded-full shadow-md hover:scale-110 transition z-10"
             onClick={nextFramework}

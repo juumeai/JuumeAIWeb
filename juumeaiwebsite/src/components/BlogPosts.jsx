@@ -5,7 +5,6 @@ import AIImage from "../images/AI.png";
 const BlogPost = ({ blog, onBack }) => {
   return (
     <div className="min-h-screen bg-white text-black">
-      {/* Hero Section */}
       <div className="relative w-full h-[500px]">
         <img
           src={blog.image || AIImage}
@@ -13,7 +12,6 @@ const BlogPost = ({ blog, onBack }) => {
           className="absolute inset-0 w-full h-full object-cover brightness-75"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-          {/* Back Button */}
           <button
             onClick={onBack}
             className="absolute top-6 left-6 bg-white px-4 py-2 text-black font-semibold border-2 border-black rounded-full hover:bg-black hover:text-white transition"
@@ -21,21 +19,18 @@ const BlogPost = ({ blog, onBack }) => {
             ← Back to Blogs
           </button>
 
-          {/* Blog Title */}
           <h1 className="text-6xl font-extrabold text-center text-white">
             {blog.title}
           </h1>
         </div>
       </div>
 
-      {/* Blog Content */}
       <div className="px-12 py-12 text-lg font-semibold leading-relaxed">
         {blog.content.split("\n\n").map((paragraph, index) => (
           <p key={index} className="mb-6">{paragraph}</p>
         ))}
       </div>
 
-      {/* References Section */}
       {blog.references && (
         <div className="px-12 py-6">
           <h2 className="text-3xl text-black font-semibold mb-4">References</h2>

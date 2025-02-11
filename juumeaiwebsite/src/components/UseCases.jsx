@@ -7,7 +7,7 @@ const UseCases = () => {
   return (
     <div className="bg-gray-50 py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Main Heading */}
+
         <h1 className="text-4xl sm:text-5xl font-bold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-6">
           Use Cases
         </h1>
@@ -17,7 +17,6 @@ const UseCases = () => {
           platform provides full-spectrum security and compliance solutions tailored to the evolving AI landscape.
         </p>
 
-        {/* Security Section */}
         <section className="mt-16">
           <h2 className="text-3xl font-semibold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent">Comprehensive AI Security</h2>
           <p className="text-xl font-semibold text-center text-black mt-4">
@@ -36,7 +35,6 @@ const UseCases = () => {
           </div>
         </section>
 
-        {/* Compliance Section */}
         <section className="mt-20">
           <h2 className="text-3xl font-bold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent">Regulatory Compliance Made Simple</h2>
           <p className="text-xl text-center font-semibold text-black mt-4">
@@ -55,7 +53,6 @@ const UseCases = () => {
           </div>
         </section>
 
-        {/* Closing Statement */}
         <section className="mt-20 text-center max-w-3xl mx-auto">
           <p className="text-xl text-black font-semibold">
             As AI continues to revolutionize industries, securing and regulating its use is paramount. 
@@ -68,7 +65,6 @@ const UseCases = () => {
   );
 };
 
-// Security Features Data
 const securityFeatures = [
   {
     title: "Real-Time Security Controls",
@@ -92,7 +88,6 @@ const securityFeatures = [
   },
 ];
 
-// Compliance Features Data
 const complianceFeatures = [
   {
     title: "Automated Compliance Mapping",

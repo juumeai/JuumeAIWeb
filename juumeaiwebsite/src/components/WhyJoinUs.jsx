@@ -8,7 +8,7 @@ import Tyson from "../images/Tyson.png";
 import vasu from "../images/vasu.jpg"
 
 const WhyJoinUs = () => {
-  const navigate = useNavigate(); // React Router navigation
+  const navigate = useNavigate(); 
 
   const teamMembers = [
     { "name": "Jerrod McBride", 
@@ -31,7 +31,7 @@ const WhyJoinUs = () => {
   return (
     <div className="bg-white min-h-screen text-black">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
-        {/* Hero Section */}
+
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-20">
           <h1 className="text-6xl font-bold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent">
             Why join us?
@@ -43,7 +43,6 @@ const WhyJoinUs = () => {
           </p>
         </div>
 
-        {/* Life at Juume Section */}
         <section className="mb-20">
           <h2 className="text-4xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-8">
             Life at Juume
@@ -54,7 +53,6 @@ const WhyJoinUs = () => {
           </p>
         </section>
 
-        {/* Testimonial Section */}
         <section className="mb-20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="md:w-2/3">
@@ -75,7 +73,6 @@ const WhyJoinUs = () => {
           </div>
         </section>
 
-        {/* Diversity and Inclusion Section */}
         <section className="mb-20">
           <h2 className="text-4xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-8">
             Diversity and Inclusion
@@ -86,7 +83,6 @@ const WhyJoinUs = () => {
           </p>
         </section>
 
-        {/* Meet The Team Section */}
         <section className="mb-20">
           <h2 className="text-4xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-12">
             Meet The Team
@@ -113,10 +109,9 @@ const WhyJoinUs = () => {
           </div>
         </section>
 
-        {/* Find Positions Button */}
         <div className="flex justify-center">
           <button
-            onClick={() => navigate("/open-positions")} // Use navigate instead of onPageChange
+            onClick={() => navigate("/open-positions")}
             className="px-8 py-3 bg-[#17194c] text-white rounded-full flex items-center gap-3 font-semibold text-lg transition-all duration-300 hover:bg-[#273184] hover:shadow-lg group"
           >
             Find Positions

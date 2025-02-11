@@ -80,25 +80,23 @@ const OpenPositions = ({ onJobSelect }) => {
 
   return (
     <div className="bg-white min-h-screen py-16 px-6 sm:px-12">
-      {/* Title Centered with Gradient */}
+
       <h1 className="text-6xl font-extrabold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-12">
         Open Positions
       </h1>
 
-      {/* Job Listings Section */}
       <div className="w-full max-w-5xl mx-auto">
         {jobs.map((job, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row justify-between items-center bg-gray-100 px-8 py-6 rounded-lg shadow-md mb-6 hover:shadow-lg transition"
           >
-            {/* Job Details */}
+
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-semibold text-black">{job.title}</h3>
               <p className="text-gray-600">{job.location} • {job.type}</p>
             </div>
 
-            {/* Apply Button */}
             <button
               className="mt-4 md:mt-0 px-6 py-3 bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] text-white rounded-lg font-semibold shadow-md transition transform hover:scale-105 hover:shadow-xl"
               onClick={() => handleApply(job)}

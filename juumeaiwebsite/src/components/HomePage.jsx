@@ -80,12 +80,10 @@ const HomePage = () => {
 
     return (
       <div className="relative w-full max-w-[800px] h-[800px] flex justify-center items-center border-2 border-slate-900 rounded-full mx-auto mt-16 bg-gradient-to-b from-[#17194c] to-[#273184] shadow-lg">
-        {/* Center Text */}
         <p className="absolute text-white font-semibold text-center w-64 text-xl">
           Let's define key terms for better understanding.
         </p>
 
-        {/* Bubbles */}
         {items.map((item) => {
           const radius = 400
           const size = bubbleSizes.current[item.name]
@@ -117,8 +115,6 @@ const HomePage = () => {
             >
               <span className="px-2">{item.name}</span>
             </div>
-
-              {/* Floating Tooltip */}
               {hovered === item.name && (
                 <div
                   className="absolute bg-white border-2 border-[#d5e33c] text-black text-md font-semibold px-6 py-3 rounded-lg shadow-lg w-[400px] text-left z-50 animate-float"
@@ -148,7 +144,6 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
         <section className="flex flex-col lg:flex-row items-center justify-between py-12">
           <div className="w-full lg:w-1/2 text-left mb-8 lg:mb-0">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight relative">
@@ -162,8 +157,6 @@ const HomePage = () => {
               innovate responsibly, stay protected, and lead with confidence.
             </p>
           </div>
-
-          {/* Wire Image - Hidden below 1022px */}
           <div className="hidden lg:flex w-[55%] justify-end">
             <img
               src={Wire || "/placeholder.svg"}
@@ -172,16 +165,11 @@ const HomePage = () => {
             />
           </div>
         </section>
-
-        {/* How Juume Secures AI */}
         <section className="text-center py-12">
           <h2 className="text-3xl sm:text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-12">
             How Juume Secures Your AI - At a Glance
           </h2>
-
-          {/* Video Section */}
           <div className="flex flex-col items-center space-y-12 px-4 sm:px-6 lg:px-12 mt-12 pb-16">
-            {/* Video 1 */}
             <div className="relative w-full max-w-4xl">
               <video
                 autoPlay
@@ -197,7 +185,6 @@ const HomePage = () => {
               </video>
             </div>
 
-            {/* Video 2 */}
             <div className="relative w-full max-w-4xl">
               <video
                 autoPlay
@@ -214,11 +201,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Circle Diagram or Timeline */}
           <div className="mt-32">{windowWidth >= 1375 ? <CircleDiagram /> : <Timeline />}</div>
         </section>
-
-        {/* Additional spacing before footer */}
         <div className="h-24"></div>
       </div>
     </div>

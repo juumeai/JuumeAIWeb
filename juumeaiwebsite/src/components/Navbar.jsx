@@ -1,66 +1,66 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { FaChevronDown, FaBars } from "react-icons/fa";
-import logo from "../images/logo.png";
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
+import { FaChevronDown, FaBars } from "react-icons/fa"
+import logo from "../images/logo.png"
 
 const Navbar = () => {
-  const location = useLocation();
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [activePage, setActivePage] = useState("home");
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
+  const location = useLocation()
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const [activePage, setActivePage] = useState("home")
+  const [openDropdown, setOpenDropdown] = useState(null)
+  const [openMobileDropdown, setOpenMobileDropdown] = useState(null)
 
   const toggleMobileMenu = () => {
-    setIsMobileOpen(!isMobileOpen);
-  };
+    setIsMobileOpen(!isMobileOpen)
+  }
 
   const toggleDropdown = (menu) => {
-    setOpenDropdown(openDropdown === menu ? null : menu);
-  };
+    setOpenDropdown(openDropdown === menu ? null : menu)
+  }
 
   const toggleMobileDropdown = (menu) => {
-    setOpenMobileDropdown(openMobileDropdown === menu ? null : menu);
-  };
+    setOpenMobileDropdown(openMobileDropdown === menu ? null : menu)
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest(".dropdown-container")) {
-        setOpenDropdown(null);
+        setOpenDropdown(null)
       }
-    };
+    }
 
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
+    document.addEventListener("click", handleClickOutside)
+    return () => document.removeEventListener("click", handleClickOutside)
+  }, [])
 
   useEffect(() => {
     if (location.pathname === "/") {
-      setActivePage("home");
+      setActivePage("home")
     } else if (location.pathname === "/home") {
-      setActivePage("home");
+      setActivePage("home")
     } else if (location.pathname === "/about-us") {
-      setActivePage("about-us");
+      setActivePage("about-us")
     } else if (location.pathname === "/use-cases") {
-      setActivePage("use-cases");
+      setActivePage("use-cases")
     } else if (location.pathname === "/ai-frameworks") {
-      setActivePage("ai-frameworks");
+      setActivePage("ai-frameworks")
     } else if (location.pathname === "/cybersecurity-frameworks") {
-      setActivePage("cybersecurity-frameworks");
+      setActivePage("cybersecurity-frameworks")
     } else if (location.pathname === "/byop") {
-      setActivePage("byop");
+      setActivePage("byop")
     } else if (location.pathname === "/blogs") {
-      setActivePage("blogs");
+      setActivePage("blogs")
     } else if (location.pathname === "/podcasts") {
-      setActivePage("podcasts");
+      setActivePage("podcasts")
     } else if (location.pathname === "/press") {
-      setActivePage("press");
+      setActivePage("press")
     } else if (location.pathname === "/why-join-us") {
-      setActivePage("why-join-us");
+      setActivePage("why-join-us")
     } else if (location.pathname === "/open-positions") {
-      setActivePage("open-positions");
+      setActivePage("open-positions")
     } else if (location.pathname === "/contact-us") {
-      setActivePage("contact-us");
+      setActivePage("contact-us")
     }
   })
 
@@ -80,26 +80,25 @@ const Navbar = () => {
       { name: "Why Join Us", path: "/why-join-us" },
       { name: "Open Positions", path: "/open-positions" },
     ],
-  };
+  }
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav className="bg-white shadow-md fixed w-full z-[60]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
 
-          {/* Logo */}
           <Link to="/home" className="flex-shrink-0">
-            <img src={logo} alt="JUUME AI Logo" className="h-14 w-auto" />
+            <img src={logo || "/placeholder.svg"} alt="JUUME AI Logo" className="h-14 w-auto" />
           </Link>
 
-          {/* Desktop Navigation */}
           <ul className="hidden lg:flex items-center space-x-8 font-medium">
-            {/* Home */}
             <li>
               <Link
                 to="/home"
                 className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                  activePage === "home" ? "text-purple-700 border-2 font-bold rounded-lg border-purple-500" : "text-black font-semibold hover:text-purple-600"
+                  activePage === "home"
+                    ? "text-purple-700 border-2 font-bold rounded-lg border-purple-500"
+                    : "text-black font-semibold hover:text-purple-600"
                 }`}
                 onClick={() => setActivePage("home")}
               >
@@ -107,12 +106,13 @@ const Navbar = () => {
               </Link>
             </li>
 
-            {/* About Us */}
             <li>
               <Link
                 to="/about-us"
                 className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                  activePage === "about-us" ? "text-purple-700 border-2 font-bold rounded-lg border-purple-500" : "text-black font-semibold hover:text-purple-600"
+                  activePage === "about-us"
+                    ? "text-purple-700 border-2 font-bold rounded-lg border-purple-500"
+                    : "text-black font-semibold hover:text-purple-600"
                 }`}
                 onClick={() => setActivePage("about-us")}
               >
@@ -125,7 +125,9 @@ const Navbar = () => {
                 <button
                   onClick={() => toggleDropdown(menu)}
                   className={`flex items-center space-x-1 transition px-4 py-2 rounded-md ${
-                    activePage === menu.toLowerCase() ? "text-purple-700 border-2 rounded-lg border-purple-500 font-bold" : "text-black font-semibold hover:text-purple-600"
+                    activePage === menu.toLowerCase()
+                      ? "text-purple-700 border-2 rounded-lg border-purple-500 font-bold"
+                      : "text-black font-semibold hover:text-purple-600"
                   }`}
                 >
                   <span>{menu}</span>
@@ -153,7 +155,9 @@ const Navbar = () => {
               <Link
                 to="/contact-us"
                 className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                  activePage === "contact-us" ? "text-purple-700 border-2 font-bold rounded-lg border-purple-500" : "text-black font-semibold hover:text-purple-600"
+                  activePage === "contact-us"
+                    ? "text-purple-700 border-2 font-bold rounded-lg border-purple-500"
+                    : "text-black font-semibold hover:text-purple-600"
                 }`}
                 onClick={() => setActivePage("contact-us")}
               >
@@ -175,7 +179,7 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-4 py-3">
             <ul className="space-y-2">
               {["Home", "About Us"].map((menu) => {
-                const path = `/${menu.replace(/\s+/g, "-").toLowerCase()}`;
+                const path = `/${menu.replace(/\s+/g, "-").toLowerCase()}`
                 return (
                   <li key={menu}>
                     <Link
@@ -186,7 +190,7 @@ const Navbar = () => {
                       {menu}
                     </Link>
                   </li>
-                );
+                )
               })}
 
               {Object.entries(dropdownMenus).map(([menu, items]) => (
@@ -230,7 +234,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
-  );
-};
+  )
+}
 
 export default Navbar;

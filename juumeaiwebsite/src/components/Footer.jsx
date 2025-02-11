@@ -7,17 +7,16 @@ const Footer = () => {
     <footer className="bg-gradient-to-b from-white to-gray-200 text-black py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-between gap-12 mb-12">
-          {/* Logo Section */}
+
           <div className="w-full sm:w-auto mb-8 sm:mb-0">
             <Link to="/home">
               <img src={logo} alt="JUUME AI Logo" className="h-14 w-auto mx-auto sm:mx-0" />
             </Link>
           </div>
 
-          {/* Navigation Links */}
           <div className="w-full sm:w-auto">
             <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12 text-center sm:text-left">
-              {/* Home */}
+
               <div className="space-y-2">
                 <h3 className="font-semibold text-lg">
                   <Link to="/home" className="hover:text-purple-700">
@@ -26,7 +25,6 @@ const Footer = () => {
                 </h3>
               </div>
 
-              {/* About Us */}
               <div className="space-y-2">
                 <h3 className="font-semibold text-lg">
                   <Link to="/about-us" className="hover:text-purple-700">
@@ -35,7 +33,6 @@ const Footer = () => {
                 </h3>
               </div>
 
-              {/* Solutions */}
               <div className="space-y-2">
                 <h3 className="font-semibold text-lg">Solutions</h3>
                 <ul className="space-y-2">
@@ -54,7 +51,6 @@ const Footer = () => {
                 </ul>
               </div>
 
-              {/* Community */}
               <div className="space-y-2">
                 <h3 className="font-semibold text-lg">Community</h3>
                 <ul className="space-y-2">
@@ -72,7 +68,6 @@ const Footer = () => {
                 </ul>
               </div>
 
-              {/* Careers */}
               <div className="space-y-2">
                 <h3 className="font-semibold text-lg">Careers</h3>
                 <ul className="space-y-2">
@@ -89,7 +84,6 @@ const Footer = () => {
                 </ul>
               </div>
 
-              {/* Contact Us */}
               <div className="space-y-2">
                 <h3 className="font-semibold text-lg">
                   <Link to="/contact-us" className="hover:text-purple-700">
@@ -101,7 +95,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-8">
           {[
             { icon: <FaInstagram size={24} />, href: "#" },
@@ -116,7 +109,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Terms & Conditions */}
         <div className="text-center text-black text-sm">
           Welcome to JUUME AI. By accessing and using our website and services, you agree to comply with and be bound by
           the following Terms and Conditions. If you do not agree with any part of these terms, please do not use our

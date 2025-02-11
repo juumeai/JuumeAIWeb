@@ -73,7 +73,7 @@ const AboutUs = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+
       <section className="container mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <h1 className="text-5xl font-bold text-left bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent md:w-1/2">Who are we?</h1>
@@ -90,15 +90,12 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Mission, Vision, Purpose Section */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="text-4xl font-semibold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-12">
           What Builds and Drives Us
         </h2>
 
-        {/* Responsive Flowchart */}
         <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-10 relative">
-          {/* Mission */}
           <div className="relative bg-white p-6 rounded-lg shadow-md text-center w-80 animate-flowGlow">
             <MdRocketLaunch className="text-[#273184] text-5xl mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Mission</h3>
@@ -107,11 +104,9 @@ const AboutUs = () => {
             </p>
           </div>
 
-          {/* Connecting Line */}
-          <div className="hidden md:block w-16 h-1 bg-[#273184] animate-lineFlow"></div> {/* Horizontal Line for Large Screens */}
-          <div className="md:hidden w-1 h-12 bg-[#273184] animate-lineFlow"></div> {/* Vertical Line for Small Screens */}
+          <div className="hidden md:block w-16 h-1 bg-[#273184] animate-lineFlow"></div> 
+          <div className="md:hidden w-1 h-12 bg-[#273184] animate-lineFlow"></div> 
 
-          {/* Vision */}
           <div className="relative bg-white p-6 rounded-lg shadow-md text-center w-80 animate-flowGlow">
             <FaEye className="text-[#273184] text-5xl mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Vision</h3>
@@ -120,11 +115,9 @@ const AboutUs = () => {
             </p>
           </div>
 
-          {/* Connecting Line */}
-          <div className="hidden md:block w-16 h-1 bg-[#273184] animate-lineFlow"></div> {/* Horizontal Line for Large Screens */}
-          <div className="md:hidden w-1 h-12 bg-[#273184] animate-lineFlow"></div> {/* Vertical Line for Small Screens */}
+          <div className="hidden md:block w-16 h-1 bg-[#273184] animate-lineFlow"></div>
+          <div className="md:hidden w-1 h-12 bg-[#273184] animate-lineFlow"></div> 
 
-          {/* Purpose */}
           <div className="relative bg-white p-6 rounded-lg shadow-md text-center w-80 animate-flowGlow">
             <TbTargetArrow className="text-[#273184] text-5xl mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Purpose</h3>
@@ -134,7 +127,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Animation Styles */}
         <style jsx>{`
           @keyframes flowGlow {
             0% { box-shadow: 0 0 10px rgba(99, 102, 241, 0.4); }
@@ -161,15 +153,12 @@ const AboutUs = () => {
         `}</style>
     </section>
 
-    {/* Core Values Section - Timeline Layout */}
     <section className="container mx-auto px-6 py-16 relative">
       <h2 className="text-4xl font-semibold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent mb-12">
         Core Values That Shape Our Community
       </h2>
 
-      {/* Full Glowing Timeline */}
       <div className="relative ml-6">
-        {/* Glowing Vertical Line */}
         <div className="absolute left-[-2px] top-0 w-1 h-full bg-gradient-to-b from-[#17194c] to-[#273184] animate-glowTimeline" />
 
         {coreValues.map((value, index) => (
@@ -179,14 +168,12 @@ const AboutUs = () => {
               viewedSections.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            {/* Timeline Glow Circle */}
             <div
               className={`absolute w-6 h-6 rounded-full left-[-14px] top-2 transition-all duration-500 ${
                 viewedSections.includes(index) ? "bg-[#273184] animate-glowCircle" : "bg-[#273184]"
               }`}
             />
 
-            {/* Timeline Content */}
             <div className="bg-gradient-to-b from-[#17194c] to-[#273184] rounded-lg border-2 border-[#d5e33c] p-6 shadow-md hover:shadow-lg transition-all duration-300">
               <h3 className="text-2xl font-bold mb-2 text-white">{value.title}</h3>
               <p className="text-white text-xl font-semibold leading-relaxed">{value.description}</p>
@@ -195,7 +182,6 @@ const AboutUs = () => {
         ))}
       </div>
 
-      {/* Animation Styles */}
       <style jsx>{`
         @keyframes glowTimeline {
           0% { box-shadow: 0 0 10px rgba(99, 102, 241, 0.4); }

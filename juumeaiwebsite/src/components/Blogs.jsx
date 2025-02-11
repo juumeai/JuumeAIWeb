@@ -69,7 +69,7 @@ references: [
   return (
     <div className="bg-white min-h-screen py-12 text-black">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Title Animation */}
+
         <h1
           className={`text-6xl font-extrabold text-center bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent transition-opacity transform ${
             animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -79,7 +79,6 @@ references: [
         </h1>
         <br />
 
-        {/* Featured Blogs Section Animation */}
         <h2
           className={`text-5xl font-semibold mb-6 bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent transition-opacity transform ${
             animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -88,7 +87,6 @@ references: [
           Featured Blogs
         </h2>
 
-        {/* Blogs Grid with Staggered Animation */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredBlogs.map((blog, index) => (
             <div
@@ -98,7 +96,6 @@ references: [
               } delay-${index * 200}`}
               onClick={() => setSelectedBlog(blog)}
             >
-              {/* Blog Image */}
               <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg border border-gray-300 transition-transform duration-500 group-hover:scale-105">
                 <img
                   src={blog.image}
@@ -107,7 +104,6 @@ references: [
                 />
               </div>
 
-              {/* Blog Title */}
               <div className="mt-3 inline-block px-4 py-2 rounded-full font-semibold text-md bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] text-white transition-transform duration-500 group-hover:scale-110">
                 {blog.title}
               </div>

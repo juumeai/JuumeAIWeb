@@ -26,7 +26,7 @@ const JobApplication = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const formRef = useRef(null); // Reference to the form
+  const formRef = useRef(null); 
 
   if (!job) {
     return (
@@ -36,12 +36,10 @@ const JobApplication = () => {
     );
   }
 
-  // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission (native form submit)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -60,7 +58,7 @@ const JobApplication = () => {
       const result = await response.json();
       if (response.ok) {
         setLoading(false);
-        navigate("/thank-you"); // 🚀 Redirect to your Thank You page
+        navigate("/thank-you"); 
       } else {
         setLoading(false);
         alert(result.error || "Something went wrong, please try again.");
@@ -74,7 +72,7 @@ const JobApplication = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Sticky Job Title & Back Button */}
+
       <div className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md px-12 py-6 flex flex-col md:flex-row justify-between items-center border-b">
         <button className="text-[#17194c] hover:text-[#273184] transition font-semibold text-lg" onClick={() => navigate(-1)}>
           ← Back to Job Details
@@ -85,7 +83,6 @@ const JobApplication = () => {
         </h1>
       </div>
 
-      {/* Application Form Section */}
       <div className="px-12 py-16">
         <form
           ref={formRef}
@@ -95,10 +92,9 @@ const JobApplication = () => {
           onSubmit={handleSubmit}
           className="max-w-5xl mx-auto bg-gray-100 shadow-lg rounded-lg p-10 space-y-8"
         >
-          {/* Job Title (Hidden Input) */}
+
           <input type="hidden" name="job_title" value={job.title} />
 
-          {/* Section: Personal Details */}
           <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent">
             Personal Details
           </h2>
@@ -129,7 +125,6 @@ const JobApplication = () => {
             </div>
           </div>
 
-          {/* Section: Resume Upload */}
           <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent">
             Upload Your Resume
           </h2>
@@ -138,7 +133,6 @@ const JobApplication = () => {
             <input type="file" name="resume" className="w-full" required />
           </div>
 
-          {/* Section: Social & Portfolio Links */}
           <h2 className="text-3xl font-semibold bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] bg-clip-text text-transparent">
             Social & Portfolio Links
           </h2>
@@ -164,7 +158,6 @@ const JobApplication = () => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <div className="flex justify-center">
             <button type="submit" className="mt-4 px-8 py-3 bg-gradient-to-b from-[#17194c] via-[#273184] to-[#d3b2f9] text-white rounded-lg font-semibold shadow-md transition transform hover:scale-105 hover:shadow-xl flex items-center gap-2">
               {loading ? "Submitting..." : <><FaCheckCircle className="text-white text-lg" /> Submit Application</>}
