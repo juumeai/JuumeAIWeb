@@ -54,6 +54,7 @@ const App = () => {
           <Route path="/job-details" element={<JobDetails />} />
           <Route path="/job-application" element={<JobApplication />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
 
