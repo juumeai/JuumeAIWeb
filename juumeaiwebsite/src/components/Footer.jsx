@@ -97,10 +97,10 @@ const Footer = () => {
 
         <div className="flex justify-center space-x-6 mb-8">
           {[
-            { icon: <FaInstagram size={24} />, href: "#" },
-            { icon: <FaFacebook size={24} />, href: "#" },
-            { icon: <FaYoutube size={24} />, href: "#" },
-            { icon: <FaXTwitter size={24} />, href: "#" },
+            { icon: <FaInstagram size={24} />, href: "https://www.linkedin.com/company/juume-ai" },
+            { icon: <FaFacebook size={24} />, href: "https://www.linkedin.com/company/juume-ai" },
+            { icon: <FaYoutube size={24} />, href: "https://www.linkedin.com/company/juume-ai" },
+            { icon: <FaXTwitter size={24} />, href: "https://www.linkedin.com/company/juume-ai" },
             { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/company/juume-ai" },
           ].map((social, index) => (
             <a key={index} href={social.href} className="text-black hover:text-purple-700">
