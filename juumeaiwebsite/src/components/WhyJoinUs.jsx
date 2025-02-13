@@ -16,7 +16,7 @@ const WhyJoinUs = () => {
       "image": Jerrod,
       "linkedin":"https://www.linkedin.com/in/jerrod-mcbride/"
     },
-    { "name": "Uma Natrajan", 
+    { "name": "Uma Natarajan", 
       "role": "CTO/COO", 
       "image": Uma,
       "linkedin":"https://www.linkedin.com/in/uma-natarajan/"
